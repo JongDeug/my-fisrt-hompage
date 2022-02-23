@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="chartStyle.css">
+        <title>Chart</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1><a href="1.html">JongDeug</a></h1>
+        </div>
+
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+            <div id="tradingview_270b8"></div>
+            <div class="tradingview-widget-copyright">
+                <a
+                    href="https://www.tradingview.com/symbols/BTCKRW/?exchange=UPBIT"
+                    rel="noopener"
+                    target="_blank"
+                    ><span class="blue-text">BTC</span></a
+                >
+                by TradingView
+            </div>
+            <script
+                type="text/javascript"
+                src="https://s3.tradingview.com/tv.js"
+            ></script>
+            <script type="text/javascript">
+                new TradingView.MediumWidget({
+                    symbols: [
+                        ["BTC", "UPBIT:BTCKRW|ALL"],
+                        ["ETH", "UPBIT:ETHKRW|ALL"],
+                        ["XRP", "UPBIT:XRPKRW|ALL"],
+                        ["ADA", "UPBIT:ADAUSDT|ALL"],
+                        ["SAND", "UPBIT:SANDKRW|ALL"],
+                    ],
+                    chartOnly: false,
+                    width: 1000,
+                    height: 400,
+                    locale: "en",
+                    colorTheme: "light",
+                    gridLineColor: "rgba(240, 243, 250, 0)",
+                    fontColor: "#787B86",
+                    isTransparent: false,
+                    autosize: false,
+                    showVolume: false,
+                    scalePosition: "no",
+                    scaleMode: "Normal",
+                    fontFamily: "Trebuchet MS, sans-serif",
+                    noTimeScale: false,
+                    valuesTracking: "1",
+                    chartType: "line",
+                    container_id: "tradingview_270b8",
+                });
+            </script>
+        </div>
+        <!-- TradingView Widget END -->
+    </body>
+</html>

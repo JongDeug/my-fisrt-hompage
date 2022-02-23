@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1f1f1f;
+    font-family: 'Righteous', cursive;
+}
+
+/* header */
+/* -------------------------------------------------------------------- */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.header > h1 > a{
+    text-decoration: none;
+    color: white;
+}
+
+.header > nav > ul > li{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.header > nav > ul > li > a{
+    text-decoration: none;
+    color: white;
+}
+
+.header > nav > ul > li > a:hover{
+    cursor: pointer;
+    color: darkblue;
+}
+
+/* hero */
+/* -------------------------------------------------------------------- */
+
+/* flex를 사용할 때 높이를 설정해줘야하고 position은 필요없음! */
+.hero{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    text-align: center;
+    color: white;
+}
+
+.hero > h2{
+    font-size: 4em;
+}
+
+.hero > p{
+    font-size: 1.9em;
+    margin: 20px 0 30px;
+    /* display를 inline-block으로 해줘야지 넓이와 높이를 정할 수 있고 after을 inline 요소로 만들 수 있음 */
+    display: inline-block;
+    /* position은 blank의 위치를 정하기 위해서 */
+    position: relative;
+}
+
+/* 그냥 content를 생성한다고 생각하면됨 */
+#dynamic::after{
+    content: "";
+    background-color: white;
+    position: absolute;
+    /* translate(X, Y) X는 왼쪽부터, Y는 위쪽부터 */
+    transform: translate(10px, 5px);
+    width: 4px;
+    height: 1em;
+}
+
+#dynamic.active::after{
+    display: none;
+}
+
+/* hero-flip-button*/
+/* -------------------------------------------------------------------- */
+.hero .flip-button{
+    font-size: 1.5em;
+    /* width 퍼센트가 부모요소 가져오나봄 */
+    width: 200px;
+    /* height이 크면 돌면서 밑으로 가는데 height이 딱 맞거나 작으면 그 안에서 돌아감 */
+    height: 70px;
+    /* line-height은 height과 동일하게 맞춰주면 텍스트가 중앙에 간다. */
+    line-height: 70px; 
+    margin: 0 auto;
+    /* perspective: 1000px; 원근법 너무 많이 적용하니까 이상하게 나오네*/ 
+    transform-style: preserve-3d;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.hero .flip-button:hover{
+    transform: rotateX(-90deg);
+}
+
+.hero .front-button{
+    border: 1px solid white;
+    height: 70px;
+    transform: translateZ(35px);
+}
+
+.hero .back-button{
+    border: 1px solid white;
+    height: 70px;
+    transform: rotateX(90deg) translateZ(105px);
+}
+
+
+
