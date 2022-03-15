@@ -1,0 +1,25 @@
+/* 전체 초기화 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* a링크 초기화 */
+a{
+    color: white;
+    text-decoration: none;
+}
+
+/* 폰트 초기화 */
+body, input, textarea, select, button, table{
+    font-family: 'Righteous', cursive;
+    color: white;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+/* 배경 초기화*/
+body{
+    background-color: #1f1f1f;
+}

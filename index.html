@@ -4,32 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css -->
     <link rel="stylesheet" href="indexStyle.css">
+    <link rel="stylesheet" href="reset.css">
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
     <title>my-first-homepage</title>
 </head>
 <body>
-    <div class="header">
-        <h1><a href="index.html">JongDeug</a></h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="https://t.me/+-mwRS9xHjeBkMGVl" target="_blank">TELEGRAM</a></li>
-                <li><a href="https://twitter.com/JJondeg" target="_blank">TWITTER</a></li>
-                <li><a href="https://medium.com/" target="_blank">MEDIUM</a></li>
-            </ul>
-        </nav>
+    <!-- skip navigation -->
+    <div id="skip">
+        <a href="#heaer">헤더 영역 바로가기</a>
+        <a href="#hero">히어로 영역 바로가기</a>
     </div>
+    <!-- //skip navigation -->
 
-    <div class="hero">
-        <h2>Chart Service</h2>
-        <p class="hero-text" id="dynamic">
-            <!-- javascript -->
-        </p>
-        <div class="flip-button">
-            <div class="front-button" onclick="window.open('chart.html')">Get Started</div></a>
-            <div class="back-button" onclick="window.open('chart.html')">Go Go</div>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">
+                <div class="header">
+                    <h1><a href="index.html">JongDeug</a></h1>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="https://t.me/+-mwRS9xHjeBkMGVl" target="_blank">TELEGRAM</a></li>
+                            <li><a href="https://twitter.com/JJondeg" target="_blank">TWITTER</a></li>
+                            <li><a href="https://medium.com/" target="_blank">MEDIUM</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
+        <!-- //header -->
+
+        <div id="hero">
+            <div id="hero-tit">
+                <div class="container">
+                    <div class="tit">
+                        <h2>Chart Service</h2>
+                        <p class="hero-text" id="dynamic">
+                        <!-- javascript -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- //hero-tit -->
+
+            <div id="hero-flipButton">
+                <div class="container">
+                    <div class="flipButton">
+                        <div class="front-button" onclick="window.open('chart.html')">Get Started</div></a>
+                        <div class="back-button" onclick="window.open('chart.html')">Go Go</div>
+                    </div>
+                </div>
+            </div>
+             <!-- //hero-flipButton -->
+        </div>
+        <!-- //hero -->
     </div>
+    <!-- //wrap -->
 
     <script src="main.js"></script>
 </body>
